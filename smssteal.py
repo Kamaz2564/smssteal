@@ -1,7 +1,9 @@
 import requests, random, datetime, sys, time, argparse, os, colorama, vk
 os.system("clear")
 
-f = open('name.txt', 'r+')
+f = open('name', 'a', encoding='utf-8')
+f.close()
+f = open('name', 'r+')
 _name = f.read()
 f.close()
 
