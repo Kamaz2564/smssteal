@@ -5,7 +5,6 @@ f = open('name', 'a', encoding='utf-8')
 f.close()
 f = open('name', 'r+')
 _name = f.read()
-f.close()
 
 banner = """\033[36m                                            
  _____ _____ _____ _____ _____ _____ _____ __    
@@ -17,6 +16,8 @@ print(banner)
 
 if _name == "":
 	_name = input("\033[31m[#] Введите ваше Имя Фамилию (Иван Пупкин): \033[0m")
+	f.write(_name)
+	f.close()
 
 os.system('clear')
 print(banner)
